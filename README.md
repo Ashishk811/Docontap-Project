@@ -109,7 +109,7 @@ npm install
 npm run dev
 ```
 
-This serves the client application on [http://localhost:3000](http://localhost:3000)
+This serves the client application on [http://localhost:3000](http://localhost:5173)
 
 ---
 
