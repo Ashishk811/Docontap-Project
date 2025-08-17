@@ -95,8 +95,9 @@ DocOnTap/
 ### 🔽 Prerequisites
 
 - Node.js v18+
-- MongoDB Atlas or local instance
+- MongoDB Atlas
 - Razorpay Developer Account
+- Stripe Account
 
 ---
 
@@ -105,7 +106,7 @@ DocOnTap/
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 This serves the client application on [http://localhost:3000](http://localhost:3000)
@@ -132,7 +133,7 @@ Then run the backend server:
 npm run server
 ```
 
-It will be available on [http://localhost:5000](http://localhost:5000)
+It will be available on [http://localhost:4000](http://localhost:4000)
 
 ---
 
@@ -141,10 +142,41 @@ It will be available on [http://localhost:5000](http://localhost:5000)
 Create a `.env` file inside `/backend/`:
 
 ```env
-MONGO_URI=mongodb+srv://<your-cluster>.mongodb.net/DocOnTap
-JWT_SECRET=supersecretkey
-RAZORPAY_KEY_ID=rzp_test_abc123
-RAZORPAY_SECRET_KEY=xyz456secret
+CURRENCY = "-----Enter currency-----"
+JWT_SECRET = "-----Enter JWT secret-----"
+
+# Admin Panel Credentials
+ADMIN_EMAIL = "-----Enter admin email-----"
+ADMIN_PASSWORD = "-----Enter admin password-----"
+
+# MongoDB Setup ( required )
+MONGODB_URI = "-----Enter MongoDB URI-----"
+
+# Cloudinary Setup ( required )
+CLOUDINARY_NAME = "-----Enter Cloudinary name-----"
+CLOUDINARY_API_KEY = "-----Enter Cloudinary API key-----"
+CLOUDINARY_SECRET_KEY = "-----Enter Cloudinary secret key-----"
+
+# Razorpay Payment Integration
+RAZORPAY_KEY_ID = "-----Enter Razorpay key ID-----"
+RAZORPAY_KEY_SECRET = "-----Enter Razorpay key secret-----"
+
+# Stripe Payment Integration
+STRIPE_SECRET_KEY = "-----Enter Stripe secret key-----"
+
+# Email/SMTP Setup
+BASE_URL = "-----Enter base URL-----"
+SERVICE = "-----Enter mail service-----"
+HOST = "-----Enter mail host-----"
+EMAIL_PORT = "-----Enter mail port-----"
+SECURE = "-----true/false for secure connection-----"
+USER = "-----Enter mail user-----"
+PASS = "-----Enter mail password-----"
+
+# Zoom Ids
+zoomAccountId = "-----Enter Zoom account ID-----"
+zoomClientId = "-----Enter Zoom client ID-----"
+zoomClientSecret = "-----Enter Zoom client secret-----"
 ```
 
 ---
