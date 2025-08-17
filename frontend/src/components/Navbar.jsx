@@ -204,9 +204,9 @@ const Navbar = () => {
         ) : (
           <button
             onClick={() => navigate("/login")}
-            className="bg-primary text-white px-6 py-2 rounded-full font-medium hidden md:block hover:scale-105 transition-transform duration-300"
+            className="bg-primary text-white px-4 md:px-6 py-2 rounded-full font-medium hover:scale-105 transition-transform duration-300"
           >
-            Create account
+            Login
           </button>
         )}
 
@@ -253,7 +253,7 @@ const Navbar = () => {
               </div>
 
               {/* Profile Actions in Mobile */}
-              {token && (
+              {token ? (
                 <div className="mt-auto mb-6">
                   <button
                     onClick={() => {
@@ -283,7 +283,7 @@ const Navbar = () => {
                     Logout
                   </button>
                 </div>
-              )}
+              ) : null}
             </div>
           </div>
         )}
